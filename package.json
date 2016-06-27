@@ -1,0 +1,20 @@
+{
+  "name": "local-web-server-blacklist",
+  "author": "Lloyd Brookes <75pound@gmail.com>",
+  "version": "0.0.0",
+  "description": "blacklist",
+  "repository": "https://github.com/local-web-server/blacklist.git",
+  "license": "MIT",
+  "main": "./lib/blacklist.js",
+  "keywords": [],
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "tape test/*.js",
+    "docs": "jsdoc2md -t jsdoc2md/README.md lib/*.js > README.md; echo"
+  },
+  "dependencies": {
+    "path-to-regexp": "^1.5.3"
+  }
+}
