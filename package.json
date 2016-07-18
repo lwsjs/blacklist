@@ -17,5 +17,8 @@
   "dependencies": {
     "array-back": "^1.0.3",
     "path-to-regexp": "^1.5.3"
+  },
+  "devDependencies": {
+    "tape": "^4.6.0"
   }
 }
