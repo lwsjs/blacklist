@@ -15,10 +15,7 @@
     "docs": "jsdoc2md -t jsdoc2md/README.md lib/*.js > README.md; echo"
   },
   "dependencies": {
-    "array-back": "^1.0.3",
-    "path-to-regexp": "^1.5.3"
-  },
-  "devDependencies": {
-    "tape": "^4.6.0"
+    "array-back": "^1.0.4",
+    "path-to-regexp": "^1.7.0"
   }
 }
