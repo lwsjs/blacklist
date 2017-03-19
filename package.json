@@ -1,14 +1,14 @@
 {
-  "name": "local-web-server-blacklist",
+  "name": "lws-blacklist",
   "author": "Lloyd Brookes <75pound@gmail.com>",
   "version": "0.0.0",
   "description": "blacklist",
-  "repository": "https://github.com/local-web-server/blacklist.git",
+  "repository": "https://github.com/lwsjs/blacklist.git",
   "license": "MIT",
   "main": "./lib/blacklist.js",
   "keywords": [],
   "engines": {
-    "node": ">=0.10.0"
+    "node": ">=4"
   },
   "scripts": {
     "test": "tape test/*.js",
