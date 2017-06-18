@@ -1,11 +1,13 @@
 {
   "name": "lws-blacklist",
   "author": "Lloyd Brookes <75pound@gmail.com>",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "blacklist",
   "repository": "https://github.com/lwsjs/blacklist.git",
   "license": "MIT",
-  "keywords": [ "lws" ],
+  "keywords": [
+    "lws"
+  ],
   "engines": {
     "node": ">=7.6"
   },
