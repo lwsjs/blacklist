@@ -5,14 +5,12 @@
   "description": "blacklist",
   "repository": "https://github.com/lwsjs/blacklist.git",
   "license": "MIT",
-  "main": "./lib/blacklist.js",
-  "keywords": [],
+  "keywords": [ "lws" ],
   "engines": {
-    "node": ">=4"
+    "node": ">=7.6"
   },
   "scripts": {
-    "test": "tape test/*.js",
-    "docs": "jsdoc2md -t jsdoc2md/README.md lib/*.js > README.md; echo"
+    "test": "test-runner test.js"
   },
   "dependencies": {
     "array-back": "^1.0.4",

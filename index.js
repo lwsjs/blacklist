@@ -1,6 +1,8 @@
-'use strict'
+module.exports = MiddlewareBase => class Blacklist extends MiddlewareBase {
+  description () {
+    return 'Forbid certain routes.'
+  }
 
-class Blacklist {
   optionDefinitions () {
     return {
       name: 'forbid',
@@ -17,6 +19,7 @@ class Blacklist {
     const forbidList = arrayify(options.forbid)
     if (forbidList.length) {
       const pathToRegexp = require('path-to-regexp')
+      this.view.write('blacklist.config', forbidList)
       return function blacklist (ctx, next) {
         if (forbidList.some(expression => pathToRegexp(expression).test(ctx.path))) {
           ctx.status = 403
@@ -27,5 +30,3 @@ class Blacklist {
     }
   }
 }
-
-module.exports = Blacklist
