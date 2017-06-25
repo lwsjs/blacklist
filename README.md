@@ -5,3 +5,9 @@
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](https://github.com/feross/standard)
 
 # blacklist
+
+Middleware for [lws](https://github.com/lwsjs/lws) enabling certain routes to be forbidden. See [here](https://github.com/lwsjs/local-web-server/wiki/How-to-blacklist-certain-routes) for usage instructions.
+
+* * *
+
+&copy; 2017 Lloyd Brookes <75pound@gmail.com>.

@@ -1,27 +1,26 @@
 module.exports = MiddlewareBase => class Blacklist extends MiddlewareBase {
   description () {
-    return 'Forbid certain routes.'
+    return 'Forbid requests for sensitive or private resources'
   }
 
   optionDefinitions () {
     return {
-      name: 'forbid',
-      alias: 'b',
+      name: 'blacklist',
       type: String,
       multiple: true,
       typeLabel: '[underline]{path} ...',
-      description: 'A list of forbidden routes.'
+      description: 'A list of routes to forbid, e.g. `--blacklist "/admin/*" "*.php"`'
     }
   }
 
   middleware (options) {
     const arrayify = require('array-back')
-    const forbidList = arrayify(options.forbid)
-    if (forbidList.length) {
+    const blacklist = arrayify(options.blacklist)
+    if (blacklist.length) {
       const pathToRegexp = require('path-to-regexp')
-      this.view.write('blacklist.config', forbidList)
-      return function blacklist (ctx, next) {
-        if (forbidList.some(expression => pathToRegexp(expression).test(ctx.path))) {
+      this.emit('verbose', 'middleware.blacklist.config', { blacklist })
+      return function (ctx, next) {
+        if (blacklist.some(expression => pathToRegexp(expression).test(ctx.path))) {
           ctx.status = 403
         } else {
           return next()
