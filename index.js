@@ -1,6 +1,6 @@
 module.exports = MiddlewareBase => class Blacklist extends MiddlewareBase {
   description () {
-    return 'Forbid requests for sensitive or private resources'
+    return 'Forbid access to sensitive or private resources.'
   }
 
   optionDefinitions () {
