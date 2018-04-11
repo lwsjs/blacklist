@@ -2,7 +2,7 @@
   "name": "lws-blacklist",
   "author": "Lloyd Brookes <75pound@gmail.com>",
   "version": "0.2.3",
-  "description": "blacklist",
+  "description": "Middleware for lws enabling certain routes to be forbidden",
   "repository": "https://github.com/lwsjs/blacklist.git",
   "license": "MIT",
   "keywords": [
@@ -16,11 +16,11 @@
   },
   "dependencies": {
     "array-back": "^2.0.0",
-    "path-to-regexp": "^1.7.0"
+    "path-to-regexp": "^2.2.0"
   },
   "devDependencies": {
-    "lws": "^1.0.0-pre4.0",
+    "lws": "^1.2.1",
     "req-then": "^0.6.4",
-    "test-runner": "^0.4.0"
+    "test-runner": "^0.5.0"
   }
 }
