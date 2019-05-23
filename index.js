@@ -9,7 +9,7 @@ module.exports = MiddlewareBase => class Blacklist extends MiddlewareBase {
       type: String,
       multiple: true,
       typeLabel: '{underline path} {underline ...}',
-      description: 'A list of routes to forbid, e.g. `--blacklist "/admin/*" "*.php"`'
+      description: 'A list of routes to forbid, e.g. `--blacklist "/admin/(.*)" "(.*).php"`'
     }
   }
 
