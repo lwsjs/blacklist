@@ -1,4 +1,6 @@
-module.exports = MiddlewareBase => class Blacklist extends MiddlewareBase {
+const EventEmitter = require('events')
+
+class Blacklist extends EventEmitter {
   description () {
     return 'Forbid access to sensitive or private resources.'
   }
@@ -29,3 +31,5 @@ module.exports = MiddlewareBase => class Blacklist extends MiddlewareBase {
     }
   }
 }
+
+module.exports = Blacklist
