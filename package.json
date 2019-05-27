@@ -1,7 +1,7 @@
 {
   "name": "lws-blacklist",
   "author": "Lloyd Brookes <75pound@gmail.com>",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Middleware for lws enabling certain routes to be forbidden",
   "repository": "https://github.com/lwsjs/blacklist.git",
   "license": "MIT",
