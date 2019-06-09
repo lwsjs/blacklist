@@ -6,7 +6,8 @@
   "repository": "https://github.com/lwsjs/blacklist.git",
   "license": "MIT",
   "keywords": [
-    "lws"
+    "lws",
+    "lws-middleware"
   ],
   "engines": {
     "node": ">=8"
@@ -19,7 +20,7 @@
     "path-to-regexp": "^3.0.0"
   },
   "devDependencies": {
-    "lws": "^2.0.0-7",
+    "lws": "^2.0.0",
     "node-fetch": "^2.6.0",
     "test-runner": "^0.6.0"
   },

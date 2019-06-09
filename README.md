@@ -8,6 +8,12 @@
 
 Middleware for [lws](https://github.com/lwsjs/lws) enabling certain routes to be forbidden. See [here](https://github.com/lwsjs/local-web-server/wiki/How-to-blacklist-certain-routes) for usage instructions.
 
+Adds the following options to lws.
+
+```
+--blacklist path ...           A list of routes to forbid, e.g. `--blacklist "/admin/(.*)" "(.*).php"`
+```
+
 * * *
 
 &copy; 2016-19 Lloyd Brookes \<75pound@gmail.com\>.
