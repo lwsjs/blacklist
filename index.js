@@ -19,7 +19,7 @@ class Blacklist extends EventEmitter {
     const arrayify = require('array-back')
     const blacklist = arrayify(options.blacklist)
     if (blacklist.length) {
-      const pathToRegexp = require('path-to-regexp')
+      const { pathToRegexp } = require('path-to-regexp')
       this.emit('verbose', 'middleware.blacklist.config', { blacklist })
       return function (ctx, next) {
         if (blacklist.some(expression => pathToRegexp(expression).test(ctx.path))) {
