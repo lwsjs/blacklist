@@ -1,4 +1,5 @@
-const EventEmitter = require('events')
+import EventEmitter from 'events'
+import arrayify from 'array-back'
 
 class Blacklist extends EventEmitter {
   description () {
@@ -16,13 +17,14 @@ class Blacklist extends EventEmitter {
   }
 
   middleware (options) {
-    const arrayify = require('array-back')
     const blacklist = arrayify(options.blacklist)
     if (blacklist.length) {
-      const { pathToRegexp } = require('path-to-regexp')
       this.emit('verbose', 'middleware.blacklist.config', { blacklist })
       return function (ctx, next) {
-        if (blacklist.some(expression => pathToRegexp(expression).test(ctx.path))) {
+        const pathIsBlacklisted = blacklist.some(function (re) {
+          return re.test(ctx.path)
+        })
+        if (pathIsBlacklisted) {
           ctx.status = 403
         } else {
           return next()
@@ -32,4 +34,4 @@ class Blacklist extends EventEmitter {
   }
 }
 
-module.exports = Blacklist
+export default Blacklist

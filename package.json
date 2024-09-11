@@ -3,26 +3,30 @@
   "author": "Lloyd Brookes <75pound@gmail.com>",
   "version": "3.0.0",
   "description": "Middleware for lws enabling certain routes to be forbidden",
-  "repository": "https://github.com/lwsjs/blacklist.git",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lwsjs/blacklist.git"
+  },
   "license": "MIT",
   "keywords": [
     "lws",
     "lws-middleware"
   ],
+  "type": "module",
+  "exports": "./index.js",
   "engines": {
-    "node": ">=10"
+    "node": ">=12.17"
   },
   "scripts": {
     "test": "test-runner test.js"
   },
   "dependencies": {
-    "array-back": "^4.0.1",
-    "path-to-regexp": "^6.1.0"
+    "array-back": "^6.2.2"
   },
   "devDependencies": {
-    "lws": "^2.0.8",
-    "node-fetch": "^2.6.0",
-    "test-runner": "^0.8.13"
+    "lws": "^4.2.0",
+    "node-fetch": "^3.3.2",
+    "test-runner": "^0.11.0"
   },
   "files": [
     "index.js"
