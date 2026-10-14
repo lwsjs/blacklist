@@ -12,7 +12,7 @@ class Blacklist extends EventEmitter {
       type: String,
       multiple: true,
       typeLabel: '{underline path} {underline ...}',
-      description: 'A list of routes to forbid, e.g. `--blacklist "/admin/(.*)" "(.*).php"`'
+      description: 'A list of paths to forbid. Regular expressions are accepted, e.g. `--blacklist "/admin/(.*)" "(.*).php"`'
     }
   }
 
@@ -21,7 +21,8 @@ class Blacklist extends EventEmitter {
     if (blacklist.length) {
       this.emit('verbose', 'middleware.blacklist.config', { blacklist })
       return function (ctx, next) {
-        const pathIsBlacklisted = blacklist.some(function (re) {
+        const pathIsBlacklisted = blacklist.some(function (blacklistPath) {
+          const re = typeof blacklistPath === 'string' ? new RegExp(blacklistPath) : blacklistPath
           return re.test(ctx.path)
         })
         if (pathIsBlacklisted) {

@@ -21,12 +21,12 @@
     "test": "test-runner test.js"
   },
   "dependencies": {
-    "array-back": "^6.2.2"
+    "array-back": "^6.2.3"
   },
   "devDependencies": {
-    "lws": "^4.2.0",
+    "lws": "^4.2.1",
     "node-fetch": "^3.3.2",
-    "test-runner": "^0.11.0"
+    "test-runner": "^0.11.1"
   },
   "files": [
     "index.js"

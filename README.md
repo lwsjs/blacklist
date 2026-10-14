@@ -17,4 +17,4 @@ Adds the following options to lws.
 
 * * *
 
-&copy; 2016-25 Lloyd Brookes \<75pound@gmail.com\>.
+&copy; 2016-26 Lloyd Brookes \<75pound@gmail.com\>.
